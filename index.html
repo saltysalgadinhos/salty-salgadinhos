@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Salty Salgadinhos — Combos Copa 2026</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #0a0a0a; font-family: system-ui, -apple-system, sans-serif; color: #fff; }
+.hero { background: linear-gradient(135deg, #006400 0%, #009B3A 50%, #006400 100%); padding: 36px 20px 28px; text-align: center; position: relative; overflow: hidden; }
+.hero::before { content: '⚽'; position: absolute; font-size: 120px; opacity: 0.07; top: -10px; right: -20px; }
+.hero::after { content: '🇧🇷'; position: absolute; font-size: 80px; opacity: 0.1; bottom: -10px; left: -10px; }
+.hero-badge { background: #FFDF00; color: #006400; font-size: 11px; font-weight: 700; padding: 4px 14px; border-radius: 20px; display: inline-block; margin-bottom: 12px; letter-spacing: 0.05em; text-transform: uppercase; }
+.hero h1 { font-size: 28px; font-weight: 800; line-height: 1.2; margin-bottom: 6px; }
+.hero h1 span { color: #FFDF00; }
+.hero p { font-size: 14px; opacity: 0.85; margin-bottom: 0; }
+.entrega-badge { display: inline-flex; align-items: center; gap: 6px; background: #0d1f0d; border: 1px solid #1a3a1a; border-radius: 20px; padding: 6px 14px; font-size: 12px; color: #4ade80; margin-top: 12px; }
+.section { padding: 24px 20px; }
+.section-title { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #FFDF00; margin-bottom: 16px; text-align: center; }
+.combos-grid { display: flex; flex-direction: column; gap: 10px; max-width: 420px; margin: 0 auto; }
+.combo-card { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 14px; padding: 14px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.combo-card.destaque { border-color: #FFDF00; background: #1a1a0a; position: relative; }
+.combo-card.destaque::before { content: '⭐ MAIS PEDIDO'; position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: #FFDF00; color: #000; font-size: 10px; font-weight: 700; padding: 2px 12px; border-radius: 10px; white-space: nowrap; }
+.combo-info { flex: 1; }
+.combo-name { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+.combo-desc { font-size: 12px; color: #888; line-height: 1.4; }
+.combo-price { text-align: right; flex-shrink: 0; }
+.combo-price .price { font-size: 20px; font-weight: 800; color: #FFDF00; }
+.combo-price .frete { font-size: 10px; color: #4ade80; font-weight: 600; display: block; }
+.divider { height: 1px; background: #1a1a1a; margin: 0 20px; }
+.promo-section { padding: 20px 20px; background: #0f0f0f; }
+.promo-title { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #FFDF00; margin-bottom: 14px; text-align: center; }
+.promo-grid { display: flex; flex-direction: column; gap: 10px; max-width: 420px; margin: 0 auto; }
+.promo-card { background: linear-gradient(135deg, #1a0a0a, #1a1a0a); border: 1px solid #3a2a0a; border-radius: 14px; padding: 14px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.promo-card.top { border-color: #FFDF00; background: linear-gradient(135deg, #1a1500, #1a1a00); }
+.promo-info .promo-name { font-size: 14px; font-weight: 600; margin-bottom: 3px; }
+.promo-info .promo-items { font-size: 12px; color: #aaa; line-height: 1.5; }
+.promo-right { text-align: right; flex-shrink: 0; }
+.promo-right .price { font-size: 20px; font-weight: 800; color: #FFDF00; }
+.promo-right .frete { font-size: 10px; color: #4ade80; font-weight: 600; display: block; }
+.cta-section { padding: 24px 20px 32px; text-align: center; }
+.cta-section p { font-size: 13px; color: #888; margin-bottom: 16px; line-height: 1.6; }
+.cta-section .limite { font-size: 12px; color: #ef4444; font-weight: 600; margin-bottom: 16px; display: block; }
+.btn-wpp { display: block; max-width: 360px; margin: 0 auto 10px; background: #25D366; color: #fff; font-size: 15px; font-weight: 700; padding: 16px 24px; border-radius: 50px; text-decoration: none; text-align: center; }
+.btn-cardapio { display: block; max-width: 360px; margin: 0 auto; background: transparent; color: #888; font-size: 13px; font-weight: 500; padding: 10px 24px; border-radius: 50px; text-decoration: none; text-align: center; border: 1px solid #2a2a2a; }
+.footer { padding: 16px 20px; text-align: center; border-top: 1px solid #1a1a1a; }
+.footer p { font-size: 11px; color: #555; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">🏆 Copa do Mundo 2026</div>
+  <h1>Salgadinhos pra <span>torcer junto</span> 🇧🇷</h1>
+  <p>Entrega em Vargem Grande do Sul • Pedidos até 15h no dia do jogo</p>
+  <div class="entrega-badge">🚚 Frete grátis nos combos Copa</div>
+</div>
+
+<!-- COMBOS COPA -->
+<div class="promo-section">
+  <div class="promo-title">⚽ Combos Copa — Frete Grátis</div>
+  <div class="promo-grid">
+
+    <div class="promo-card">
+      <div class="promo-info">
+        <div class="promo-name">Combo Torcida Pequena</div>
+        <div class="promo-items">30 salgadinhos + Coca-Cola lata 350ml</div>
+      </div>
+      <div class="promo-right">
+        <span class="price">R$35</span>
+        <span class="frete">🚚 frete grátis</span>
+      </div>
+    </div>
+
+    <div class="promo-card top">
+      <div class="promo-info">
+        <div class="promo-name">Combo Torcida da Casa ⭐</div>
+        <div class="promo-items">70 salgadinhos + Coca-Cola 2L</div>
+      </div>
+      <div class="promo-right">
+        <span class="price">R$79</span>
+        <span class="frete">🚚 frete grátis</span>
+      </div>
+    </div>
+
+    <div class="promo-card">
+      <div class="promo-info">
+        <div class="promo-name">Combo Festa do Brasil</div>
+        <div class="promo-items">118 salgadinhos + Coca-Cola 2L</div>
+      </div>
+      <div class="promo-right">
+        <span class="price">R$120</span>
+        <span class="frete">🚚 frete grátis</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- COMBOS MIX -->
+<div class="section">
+  <div class="section-title">📦 Kits Mix (sem escolha de sabor)</div>
+  <div class="combos-grid">
+    <div class="combo-card">
+      <div class="combo-info">
+        <div class="combo-name">Kit 20 unidades</div>
+        <div class="combo-desc">Mix de sabores • + frete R$8</div>
+      </div>
+      <div class="combo-price">
+        <span class="price">R$19</span>
+      </div>
+    </div>
+    <div class="combo-card destaque">
+      <div class="combo-info">
+        <div class="combo-name">Kit 40 unidades</div>
+        <div class="combo-desc">Mix de sabores • + frete R$8</div>
+      </div>
+      <div class="combo-price">
+        <span class="price">R$37</span>
+      </div>
+    </div>
+    <div class="combo-card">
+      <div class="combo-info">
+        <div class="combo-name">Kit 60 unidades</div>
+        <div class="combo-desc">Mix de sabores • + frete R$8</div>
+      </div>
+      <div class="combo-price">
+        <span class="price">R$53</span>
+      </div>
+    </div>
+    <div class="combo-card">
+      <div class="combo-info">
+        <div class="combo-name">Kit 80 unidades</div>
+        <div class="combo-desc">Mix de sabores • + frete R$8</div>
+      </div>
+      <div class="combo-price">
+        <span class="price">R$70</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- KITS ESCOLHA -->
+<div class="section" style="padding-top:20px">
+  <div class="section-title">🎯 Kits com Escolha de Sabor</div>
+  <div class="combos-grid">
+    <div class="combo-card">
+      <div class="combo-info">
+        <div class="combo-name">Kit 50 unidades</div>
+        <div class="combo-desc">Você escolhe os sabores • + frete R$8</div>
+      </div>
+      <div class="combo-price">
+        <span class="price">R$45</span>
+      </div>
+    </div>
+    <div class="combo-card destaque">
+      <div class="combo-info">
+        <div class="combo-name">Kit 100 unidades</div>
+        <div class="combo-desc">Você escolhe os sabores • + frete R$8</div>
+      </div>
+      <div class="combo-price">
+        <span class="price">R$85</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-section">
+  <p>Atendemos em <strong>Vargem Grande do Sul</strong><br/>Produção artesanal • Entrega no dia do pedido</p>
+  <span class="limite">⏰ Pedidos até às 15h nos dias de jogo</span>
+  <a class="btn-wpp" href="https://wa.me/5519992142617?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20pedido%20%F0%9F%87%A7%F0%9F%87%B7">
+    💬 Pedir pelo WhatsApp
+  </a>
+  <a class="btn-cardapio" href="https://salty.saipos.com/home">
+    Ver cardápio completo
+  </a>
+</div>
+
+<div class="footer">
+  <p>Salty Salgadinhos • Vargem Grande do Sul • @saltysalgadinhos</p>
+</div>
+
+</body>
+</html>
